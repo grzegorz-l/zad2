@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		<h2>Lista firm</h2>
+		<% @firms.each do |firm| %>
+		Nazwa: <%=h firm.title %> <br>
+		Opis: <%=h firm.description %> <br>
+		<%= link_to 'Usun', firm, :method => :delete %><br>
+		<%= link_to 'Dodaj pracownika', new_worker_path %>
+		<br>
+		<% end %>
+		<%= link_to 'Nowa firma', new_firm_path %>
+	</body>
+</html>
