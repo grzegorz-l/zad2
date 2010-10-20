@@ -3,7 +3,6 @@
 <% @firms.each do |firm| %>
 	Nazwa: <%=h firm.title %> <br>
 	Opis: <%=h firm.description %> <br>
-	<%= link_to 'Lista pracownników', firm_workers_path(firm) %>
 	<%= link_to 'Dodaj pracownika', new_firm_worker_path(firm) %><br>
 	<%= link_to 'Usun', firm, :method => :delete %><br>
 	<br>

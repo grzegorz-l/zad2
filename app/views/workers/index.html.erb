@@ -1,0 +1,9 @@
+<h2>Lista pracowników w firmie: <%=h @firm.title %></h2>
+<br>
+<% @workers.each do |worker| %>
+Imię i Nazwisko: <%=h worker.name%><br>
+Wiek: <%=h worker.age%><br>
+<%= link_to 'Usun pracownika', firm_worker_path(@firm, worker), :method => :delete %>
+<br><br>
+<%end%>
+<%=link_to 'Wroc', firms_path%>
